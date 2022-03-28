@@ -1,0 +1,45 @@
+{
+  "name": "webpack-userscript-template",
+  "description": "Build your UserScript with webpack",
+  "version": "0.0.0",
+  "author": {
+    "name": "danydodson",
+    "email": "danydodson@gmail.com"
+  },
+  "scripts": {
+    "postversion": "git push --follow-tags",
+    "analize": "npm_config_report=true npm run build",
+    "build": "webpack --mode production --config config/webpack.config.production.cjs",
+    "dev": "webpack --mode development --config config/webpack.config.dev.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danydodson/webpack-userscript-template"
+  },
+  "private": true,
+  "dependencies": {
+    "axios": "^0.26.1",
+    "axios-userscript-adapter": "^0.1.11",
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/greasemonkey": "^4.0.2",
+    "@types/jquery": "^3.5.14",
+    "babel-loader": "^8.2.4",
+    "browserslist": "^4.20.2",
+    "css-loader": "^6.7.1",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "style-loader": "^3.3.1",
+    "typescript": "^4.6.3",
+    "userscript-metadata-webpack-plugin": "^0.1.1",
+    "webpack": "^5.70.0",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-livereload-plugin": "^3.0.2",
+    "webpack-merge": "^5.8.0"
+  }
+}
